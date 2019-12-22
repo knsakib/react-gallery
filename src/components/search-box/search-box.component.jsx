@@ -7,7 +7,7 @@ export const SearchBox = props => (
         <input
           className='form-control'
           type='search'
-          placeholder='search photos'
+          placeholder={props.placeholder}
           onChange={props.onSearchChange}
         />
     </div>

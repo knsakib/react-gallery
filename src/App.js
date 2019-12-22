@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://pixabay.com/api/?key=[YOUR_OWN_KEY]&q=lanscape+nature&image_type=photo&pretty=true')
+    fetch('https://pixabay.com/api/?key=[YOUR_API_KEY]&q=lanscape+nature&image_type=photo&pretty=true')
       .then(response => response.json())
       .then(photos => this.setState({ photos: photos.hits }));
   }
@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div className='App'>
         <h1>A React Photo Gallery</h1>
-        <SearchBox onSearchChange={this.onSearchChange} />
+        <SearchBox onSearchChange={this.onSearchChange} placeholder='search photos' />
         <CardList photos={filteredphotos} />
       </div>
     );
