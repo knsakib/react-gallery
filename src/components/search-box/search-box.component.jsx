@@ -1,13 +1,13 @@
 import React from 'react';
 
 export const SearchBox = props => (
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">Search with Photo Tags</span>
+  <div className="input-group mb-3">
+    <div className="input-group-prepend">
+      <span className="input-group-text" id="basic-addon1">Search with Photo Tags</span>
         <input
           className='form-control'
           type='search'
-          placeholder='search photos'
+          placeholder={props.placeholder}
           onChange={props.onSearchChange}
         />
     </div>
